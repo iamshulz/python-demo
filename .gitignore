@@ -65,5 +65,5 @@ htmlcov/
 # !*/migrations/__init__.py
 
 
-# Node Modules
-mysite/node_modules
+# Node
+node_modules/
