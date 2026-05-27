@@ -15,7 +15,7 @@
         <section class="flex items-center justify-center mt-10">
             <div class="w-full max-w-2xl shadow-md rounded-lg overflow-hidden">
                 <table class="w-full text-sm text-left text-gray-700">
-                    <thead class="text-xs text-red-500 uppercase bg-green-700">
+                    <thead class="text-xs text-red uppercase bg-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">#</th>
                             <th scope="col" class="px-6 py-3">First</th>
@@ -26,7 +26,10 @@
                     <tbody>
                         {% for i in employees %}
                         <tr class="bg-white border-b hover:bg-green-50 transition-colors">
-                            <td> {{ i }} </td>
+                            <td class="px-6 py-4">{{ forloop.counter }}</td>
+                            <td class="px-6 py-4">{{ i.first_name }}</td>
+                            <td class="px-6 py-4">{{ i.last_name }}</td>
+                            <td class="px-6 py-4">{{ i.email_address }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
