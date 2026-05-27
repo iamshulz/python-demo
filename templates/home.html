@@ -5,34 +5,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Basics</title>
+    <title>Django Basicss</title>
     <link rel="stylesheet" href="{% static 'css/output.css' %}">
 </head>
 
 <body class="bg-gray-50 font-serif leading-normal tracking-normal">
     <div class="container mx-auto">
         <img src="{% static 'images/django.png' %}" alt="test image" class="h-12 w-12"/>
-        <section class="flex items-center justify-center">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        
+<section class="flex items-center justify-center mt-10">
+    <div class="w-full max-w-2xl shadow-md rounded-lg overflow-hidden">
+        <table class="w-full text-sm text-left text-gray-700">
+            <thead class="text-xs text-red-500 uppercase bg-green-700">
+                <tr>
+                    <th scope="col" class="px-6 py-3">#</th>
+                    <th scope="col" class="px-6 py-3">First</th>
+                    <th scope="col" class="px-6 py-3">Last</th>
+                    <th scope="col" class="px-6 py-3">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b hover:bg-green-50 transition-colors">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900">3</th>
+                    <td class="px-6 py-4">Larry</td>
+                    <td class="px-6 py-4">the Bird</td>
+                    <td class="px-6 py-4 text-green-600 font-medium">@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+        {% for i in employees %}
+            {{ i }}
+        {% endfor %}
     </div>
 </body>
 </html>
